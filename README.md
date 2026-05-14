@@ -10,50 +10,6 @@
 
 ---
 
-## 📺 Полезные Telegram‑каналы (читать каждый день)
-
-Подборка каналов, которые реально помогают держать руку на пульсе индустрии: свежие статьи, релизы моделей, разборы архитектур, вакансии и собеседования. Подписывайтесь точечно и читайте регулярно — это даёт больше, чем разовый «забег» по курсам.
-
-### 🧠 Общеайтишные и фундамент
-
-- **[@csharp_ci](https://t.me/csharp_ci)** — общеайтишный канал, шорты и дайджесты по разработке.
-- **[@csharp_1001_notes](https://t.me/csharp_1001_notes)** — заметки по C# и общим инженерным темам, помогает держать тонус.
-
-### 🤖 Машинное обучение, нейросети и LLM
-
-- **[@ai_machinelearning_big_data](https://t.me/ai_machinelearning_big_data)** — **главный русскоязычный канал по ML/AI/Big Data**. Свежие статьи, релизы моделей, разборы.
-- **[Data Analysis / ML](https://t.me/data_analysis_ml)** — дата‑аналитика и ML без воды: туториалы, библиотеки, кейсы.
-- **[Вистехно](https://t.me/vistehno)** — про технологии, AI и инженерную культуру.
-- **[Machine Learning Interview](https://t.me/machinelearning_interview)** — задачи, разборы собесов и теоретические вопросы по ML.
-- **[Data Science / IoT](https://t.me/datascienceiot)** — Data Science, индустриальные применения и IoT.
-- **[Artificial Intelligence / DL](https://t.me/ArtificialIntelligencedl)** — обзоры статей по deep learning и AI.
-- **[Machine Learning Test](https://t.me/Machinelearningtest)** — тесты, мини‑задачи и проверка знаний по ML.
-- **[Machine Learning](https://t.me/machinee_learning)** — англоязычные новости и материалы по ML.
-- **[Machine Learning RU](https://t.me/machinelearning_ru)** — русскоязычный канал по ML, статьи и инструменты.
-- **[Neural Networks](https://t.me/neural)** — про нейронные сети, архитектуры и применения.
-- **[Machine Learning Rus](https://t.me/machinelearning_rus)** — материалы по ML на русском, разборы и подборки.
-- **[Big Data AI](https://t.me/bigdatai)** — Big Data, аналитика и AI‑инструменты для работы с данными.
-- **[@ai_generative](https://t.me/ai_generative)** — генеративный AI: LLM, диффузионные модели, image/video/audio generation.
-
-### 📚 Книги, базы данных и SQL
-
-- **[Machine Learning Books](https://t.me/machinelearning_books)** — книги, гайды и учебные материалы по ML/AI.
-- **[SQL Hub](https://t.me/sqlhub)** — SQL, оптимизация запросов и работа с реляционными БД.
-- **[Databases](https://t.me/databases_tg)** — про базы данных: реляционные, NoSQL, аналитические.
-
-### 💼 Вакансии и карьера
-
-- **[Data Science / ML Jobs](https://t.me/datascienceml_jobs)** — вакансии в Data Science и ML, удалёнка и офис.
-- **[Machine Learning Jobs](https://t.me/Machinelearning_Jobs)** — отдельная лента ML‑вакансий: junior, middle, senior, research.
-
-### 📁 Папки и оптовая подписка
-
-- **[📁 Большая папка ML/AI каналов](https://t.me/addlist/u15AMycxRMowZmRi)** — кураторская подборка лучших каналов по машинному обучению, нейросетям, LLM и MLOps. Подписаться оптом.
-
-> 💡 Совет: не подписывайтесь на 200 каналов. Возьмите 5–7 ключевых, читайте каждый день 15 минут — этого хватит, чтобы быть в курсе индустрии. Остальные держите в отдельной папке и заглядывайте раз в неделю.
-
----
-
 ## 🎯 TL;DR
 
 Этот roadmap — не «список курсов на год». Это **карта местности**, по которой вы прокладываете свой маршрут. Цель — не «пройти курс», а **уметь делать**: тренировать модели, поднимать инференс, строить RAG, дообучать LLM, мониторить прод, понимать статьи и читать чужой код.
@@ -248,6 +204,45 @@
 - **[Stepik — C# с нуля до профи](https://stepik.org/a/282984/pay?promo=4b3c5f3000f16022)** — ООП, SOLID, LINQ, async/await, DI, EF Core, ASP.NET Core, Docker, Kubernetes. Если параллельно с ML вы укрепляете инженерный фундамент — это лучший русскоязычный курс по C#: всё, что казалось магией, становится рабочим инструментом.
 
 > 💡 По ML платные курсы добавим по мере появления. Пока сильнейшая бесплатная база покрывает 90% потребностей — см. ниже.
+
+---
+
+## 📺 Полезные Telegram‑каналы (читать каждый день)
+
+Подборка каналов, которые реально помогают держать руку на пульсе индустрии: свежие статьи, релизы моделей, разборы архитектур, вакансии и собеседования. Подписывайтесь точечно и читайте регулярно — это даёт больше, чем разовый «забег» по курсам.
+
+### 🤖 Машинное обучение, нейросети и LLM
+
+- **[@ai_machinelearning_big_data](https://t.me/ai_machinelearning_big_data)** — **главный русскоязычный канал по ML/AI/Big Data**. Свежие статьи, релизы моделей, разборы.
+- **[Data Analysis / ML](https://t.me/data_analysis_ml)** — дата‑аналитика и ML без воды: туториалы, библиотеки, кейсы.
+- **[Вистехно](https://t.me/vistehno)** — про технологии, AI и инженерную культуру.
+- **[Machine Learning Interview](https://t.me/machinelearning_interview)** — задачи, разборы собесов и теоретические вопросы по ML.
+- **[Data Science / IoT](https://t.me/datascienceiot)** — Data Science, индустриальные применения и IoT.
+- **[Artificial Intelligence / DL](https://t.me/ArtificialIntelligencedl)** — обзоры статей по deep learning и AI.
+- **[Machine Learning Test](https://t.me/Machinelearningtest)** — тесты, мини‑задачи и проверка знаний по ML.
+- **[Machine Learning](https://t.me/machinee_learning)** — англоязычные новости и материалы по ML.
+- **[Machine Learning RU](https://t.me/machinelearning_ru)** — русскоязычный канал по ML, статьи и инструменты.
+- **[Neural Networks](https://t.me/neural)** — про нейронные сети, архитектуры и применения.
+- **[Machine Learning Rus](https://t.me/machinelearning_rus)** — материалы по ML на русском, разборы и подборки.
+- **[Big Data AI](https://t.me/bigdatai)** — Big Data, аналитика и AI‑инструменты для работы с данными.
+- **[@ai_generative](https://t.me/ai_generative)** — генеративный AI: LLM, диффузионные модели, image/video/audio generation.
+
+### 📚 Книги, базы данных и SQL
+
+- **[Machine Learning Books](https://t.me/machinelearning_books)** — книги, гайды и учебные материалы по ML/AI.
+- **[SQL Hub](https://t.me/sqlhub)** — SQL, оптимизация запросов и работа с реляционными БД.
+- **[Databases](https://t.me/databases_tg)** — про базы данных: реляционные, NoSQL, аналитические.
+
+### 💼 Вакансии и карьера
+
+- **[Data Science / ML Jobs](https://t.me/datascienceml_jobs)** — вакансии в Data Science и ML, удалёнка и офис.
+- **[Machine Learning Jobs](https://t.me/Machinelearning_Jobs)** — отдельная лента ML‑вакансий: junior, middle, senior, research.
+
+### 📁 Папки и оптовая подписка
+
+- **[📁 Большая папка ML/AI каналов](https://t.me/addlist/u15AMycxRMowZmRi)** — кураторская подборка лучших каналов по машинному обучению, нейросетям, LLM и MLOps. Подписаться оптом.
+
+> 💡 Совет: не подписывайтесь на 200 каналов. Возьмите 5–7 ключевых, читайте каждый день 15 минут — этого хватит, чтобы быть в курсе индустрии. Остальные держите в отдельной папке и заглядывайте раз в неделю.
 
 ---
 
