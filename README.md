@@ -2725,9 +2725,9 @@ Microsoft запустили официальный сертификационн
 
 ## 🧠 Нейросети с нуля до продакшна — второй модульный курс
 
-После курса по математике [math-for-ml/](./math-for-ml/README.md) логичный следующий шаг — собрать нейросеть руками и пройти путь от линейного нейрона до своего трансформера и его деплоя. Этот курс лежит в папке [**neural-networks/**](./neural-networks/README.md).
+После курса по математике [math-for-ml/](./math-for-ml/README.md) логичный следующий шаг — собрать нейросеть руками и пройти путь от линейного нейрона до собственного трансформера, мультимодальных моделей и распределённого обучения. Этот курс лежит в папке [**neural-networks/**](./neural-networks/README.md).
 
-**12 уроков, 3 блока, PyTorch + NumPy, упор на практику.**
+**18 уроков, 4 блока, PyTorch + NumPy, упор на практику. Плюс [cheatsheet](./neural-networks/cheatsheet.md) и 3 [капстон-проекта](./neural-networks/capstones/README.md).**
 
 **Блок 1. Базовые нейросети**
 
@@ -2750,10 +2750,26 @@ Microsoft запустили официальный сертификационн
 - [11. Fine-tuning и transfer learning](./neural-networks/11-finetuning.md) — feature extraction, LoRA, QLoRA, SFT, грабли catastrophic forgetting.
 - [12. От модели к продакшну](./neural-networks/12-production.md) — ONNX, квантизация, FastAPI, vLLM, KV-кеш, мониторинг и drift.
 
-**Что вы получите на выходе.** Понимание, что именно делает `loss.backward()` и `optimizer.step()`. Умение собрать любую современную архитектуру из примитивов. Готовый шаблон LoRA-fine-tuning. Знание, как модель уезжает в прод — не «по магии», а через ONNX, квантизацию и REST-обёртку. И 3 мини-проекта в портфолио: MLP на таблице, MiniGPT на Шекспире, fine-tuned LLM с REST API.
+**Блок 4. Продвинутые архитектуры**
+
+- [13. Vision Transformers и мультимодальные модели](./neural-networks/13-vision-transformers.md) — ViT с нуля, CLIP, LLaVA, SAM, DINOv2.
+- [14. Diffusion-модели](./neural-networks/14-diffusion.md) — DDPM руками, Stable Diffusion, classifier-free guidance, DiT.
+- [15. RLHF, DPO и alignment LLM](./neural-networks/15-rlhf-dpo.md) — SFT, reward model, PPO, DPO с нуля, KTO, GRPO, constitutional AI.
+- [16. Графовые нейросети (GNN)](./neural-networks/16-gnn.md) — GCN и GAT с нуля, message passing, PyTorch Geometric, Cora.
+- [17. Self-supervised и contrastive learning](./neural-networks/17-self-supervised.md) — SimCLR, MAE, DINO, BERT MLM, обучение без меток.
+- [18. Распределённое обучение](./neural-networks/18-distributed-training.md) — DDP, FSDP, mixed precision, gradient checkpointing, DeepSpeed.
+
+**📋 [Cheatsheet](./neural-networks/cheatsheet.md)** — все формулы, дефолтные гиперпараметры и грабли курса на одной странице.
+
+**🎯 Капстон-проекты:**
+
+- [**Капстон 1.** Своя классификация изображений end-to-end](./neural-networks/capstones/01-image-classifier.md) — CNN + аугментации + ONNX + Streamlit-демо.
+- [**Капстон 2.** MiniGPT с собственным датасетом](./neural-networks/capstones/02-mini-gpt.md) — BPE-токенизатор + трансформер с нуля + chat-style генерация.
+- [**Капстон 3.** Production-ready RAG-ассистент](./neural-networks/capstones/03-rag-assistant.md) — embeddings + векторная БД + LLM + FastAPI + Docker + мониторинг.
+
+**Что вы получите на выходе.** Понимание, что именно делает `loss.backward()` и `optimizer.step()`. Умение собрать любую современную архитектуру из примитивов — CNN, RNN, Transformer, ViT, Diffusion, GNN. Готовый шаблон LoRA/QLoRA/DPO fine-tuning. Знание, как модель уезжает в прод через ONNX, квантизацию и REST-обёртку. Опыт распределённого обучения. И 3 портфолио-проекта.
 
 ▶︎ Начать: [neural-networks/README.md](./neural-networks/README.md)
-
 
 ---
 
