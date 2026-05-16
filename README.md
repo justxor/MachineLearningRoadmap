@@ -2773,4 +2773,48 @@ Microsoft запустили официальный сертификационн
 
 ---
 
+## 🤖 Claude Code — отдельный курс по агенту-разработчику
+
+Знать математику и уметь собирать нейросети — половина дела. Вторая половина — научиться **работать с агентами**, которые пишут код за вас. Не на уровне «попросил ChatGPT и скопировал», а на уровне инженерной интеграции: агент в терминале с доступом к репозиторию, тестам, MCP-серверам и CI.
+
+Третий модульный курс лежит в папке [**claude-code/**](./claude-code/README.md) и покрывает Claude Code — CLI-агент от Anthropic — от установки до production-автоматизации.
+
+**18 уроков, 4 блока, упор на реальную инженерную работу. Плюс [шпаргалка](./claude-code/cheatsheet.md).**
+
+**Блок 1. Основы**
+
+- [01. Установка и первый запуск](./claude-code/01-setup.md) — npm-пакет, OAuth/API, REPL, ключевые флаги, alias.
+- [02. CLAUDE.md и контекст проекта](./claude-code/02-claude-md.md) — иерархия памяти, что писать и что выкинуть, `/init`, `#`-добавление.
+- [03. Базовые команды и режимы](./claude-code/03-commands-modes.md) — slash-команды, Normal/Plan/Auto-accept, `@`-вкладывание файлов, `/clear` vs `/compact`.
+- [04. Permissions и безопасность](./claude-code/04-permissions.md) — allow/deny/ask, sandbox-запуск в Docker, защита от prompt injection.
+
+**Блок 2. Рабочий процесс**
+
+- [05. Чтение и навигация по кодовой базе](./claude-code/05-codebase-navigation.md) — onboarding в новый репо за 5 минут, чек-лист, антипаттерны.
+- [06. Реализация фич end-to-end](./claude-code/06-feature-development.md) — схема Explore → Plan → Code → Test → PR, шаблон брифа.
+- [07. Отладка и поиск багов](./claude-code/07-debugging.md) — гипотезы, бисекция, регрессионный тест, признаки «фальшивого» фикса.
+- [08. Тесты и TDD с агентом](./claude-code/08-testing-tdd.md) — Red-Green-Refactor, property-based, защита от `.skip` и подгонки.
+- [09. Рефакторинг и миграции](./claude-code/09-refactoring.md) — codemod, strangler pattern, миграции БД с backfill и rollback.
+- [10. Git, ветки, PR](./claude-code/10-git-workflow.md) — Conventional Commits, разбиение диффа, `gh pr create`, worktree.
+
+**Блок 3. Расширения**
+
+- [11. MCP: Model Context Protocol](./claude-code/11-mcp-basics.md) — tools/resources/prompts, stdio vs SSE, свой сервер на FastMCP.
+- [12. Подключение MCP-серверов](./claude-code/12-mcp-servers.md) — filesystem, Postgres, GitHub, Playwright, Sentry, Context7.
+- [13. Кастомные slash-команды](./claude-code/13-custom-commands.md) — `.claude/commands/`, `$ARGUMENTS`, подпапки, шаблоны `/commit`, `/review`, `/tdd`.
+- [14. Subagents и параллелизм](./claude-code/14-subagents.md) — `.claude/agents/`, security-reviewer, test-writer, data-explorer.
+- [15. Hooks и автоматизация](./claude-code/15-hooks.md) — PreToolUse, PostToolUse, auto-format, guard для опасных команд, аудит-лог.
+
+**Блок 4. Production**
+
+- [16. Headless-режим и CI/CD](./claude-code/16-headless-ci.md) — `claude -p`, GitHub Actions, авто-ревью PR, nightly fix падающих тестов.
+- [17. Стоимость, токены, контекст](./claude-code/17-cost-context.md) — `/cost`, ccusage, экономия контекста, sonnet vs opus.
+- [18. Antipatterns](./claude-code/18-antipatterns.md) — типичные ошибки и привычки, которые ломают рабочий процесс.
+
+**Что вы получите на выходе:** агент встроен в реальный workflow. Свой набор `.claude/commands/` под команду. Подключённые MCP-серверы (Postgres, GitHub, Playwright). Защищённый `settings.json` с deny-листом. CI с авто-ревью на каждом PR. Понимание стоимости и умение её контролировать.
+
+▶︎ Начать: [claude-code/README.md](./claude-code/README.md)
+
+---
+
 > Этот roadmap по машинному обучению — карта местности, а не маршрут. Маршрут вы прокладываете сами, исходя из задач, рынка и того, что вас зажигает. Удачи на пути от первого `import numpy` до собственной обученной LLM.
