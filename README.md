@@ -2723,4 +2723,38 @@ Microsoft запустили официальный сертификационн
 
 ---
 
+## 🧠 Нейросети с нуля до продакшна — второй модульный курс
+
+После курса по математике [math-for-ml/](./math-for-ml/README.md) логичный следующий шаг — собрать нейросеть руками и пройти путь от линейного нейрона до своего трансформера и его деплоя. Этот курс лежит в папке [**neural-networks/**](./neural-networks/README.md).
+
+**12 уроков, 3 блока, PyTorch + NumPy, упор на практику.**
+
+**Блок 1. Базовые нейросети**
+
+- [01. Перцептрон и линейные модели](./neural-networks/01-perceptron.md) — нейрон руками, логистическая регрессия, мостик к нейросетям.
+- [02. MLP и обратное распространение](./neural-networks/02-mlp-backprop.md) — backprop как цепное правило, XOR с нуля, численная проверка градиентов.
+- [03. Функции активации и инициализация](./neural-networks/03-activations-init.md) — sigmoid → ReLU → GELU, Xavier/He, борьба с vanishing gradients.
+- [04. Регуляризация](./neural-networks/04-regularization.md) — weight decay, dropout, BatchNorm, early stopping, аугментация.
+- [05. Оптимизаторы](./neural-networks/05-optimizers.md) — SGD, Momentum, Adam, AdamW, LR Finder, learning rate schedules.
+
+**Блок 2. Архитектуры**
+
+- [06. CNN с нуля](./neural-networks/06-cnn.md) — свёртки, пулинг, CIFAR-10 до 80%+, ResNet и residual connections.
+- [07. RNN, LSTM, GRU](./neural-networks/07-rnn-lstm.md) — рекуррентность, BPTT, gradient clipping, char-RNN на Шекспире.
+- [08. Attention и self-attention](./neural-networks/08-attention.md) — Q/K/V, scaled dot-product, multi-head, causal mask.
+- [09. Transformer от начала до конца](./neural-networks/09-transformer.md) — полный MiniGPT (~100 строк), обучение на Шекспире.
+
+**Блок 3. Применение и продакшн**
+
+- [10. Embeddings и токенизация](./neural-networks/10-embeddings-tokenization.md) — BPE с нуля, sentence embeddings, semantic search, FAISS.
+- [11. Fine-tuning и transfer learning](./neural-networks/11-finetuning.md) — feature extraction, LoRA, QLoRA, SFT, грабли catastrophic forgetting.
+- [12. От модели к продакшну](./neural-networks/12-production.md) — ONNX, квантизация, FastAPI, vLLM, KV-кеш, мониторинг и drift.
+
+**Что вы получите на выходе.** Понимание, что именно делает `loss.backward()` и `optimizer.step()`. Умение собрать любую современную архитектуру из примитивов. Готовый шаблон LoRA-fine-tuning. Знание, как модель уезжает в прод — не «по магии», а через ONNX, квантизацию и REST-обёртку. И 3 мини-проекта в портфолио: MLP на таблице, MiniGPT на Шекспире, fine-tuned LLM с REST API.
+
+▶︎ Начать: [neural-networks/README.md](./neural-networks/README.md)
+
+
+---
+
 > Этот roadmap по машинному обучению — карта местности, а не маршрут. Маршрут вы прокладываете сами, исходя из задач, рынка и того, что вас зажигает. Удачи на пути от первого `import numpy` до собственной обученной LLM.
