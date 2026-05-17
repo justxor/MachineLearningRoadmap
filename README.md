@@ -2866,18 +2866,75 @@ Microsoft запустили официальный сертификационн
 
 ---
 
+## 🧠 LLM Engineering — практический курс по разработке приложений на LLM
+
+Пятый модульный курс этого репозитория — [**llm-engineering/**](./llm-engineering/README.md). Если [math-for-ml](./math-for-ml/README.md) даёт язык, [neural-networks](./neural-networks/README.md) — устройство моделей, [data-science](./data-science/README.md) — методологию работы с данными, а [claude-code](./claude-code/README.md) — агента-разработчика, то этот курс учит **строить надёжные LLM-приложения в проде**: RAG, агенты, evals, fine-tuning, локальный инференс, мониторинг.
+
+**23 урока, 5 блоков, 3 капстона. Без хайпа, без "промпт-инженер за 3 дня". Только то, что реально работает в продакшне.**
+
+**Блок 1. База LLM-инженерии**
+
+- [01. Что такое LLM и как она "думает"](./llm-engineering/01-llm-internals.md) — токены, контекст, sampling, температура.
+- [02. API провайдеров](./llm-engineering/02-providers.md) — OpenAI, Anthropic, Google, локальные; выбор и сравнение.
+- [03. Промпт-инжиниринг как инженерная дисциплина](./llm-engineering/03-prompt-engineering.md) — без магии, на тестах.
+- [04. Структурированный вывод](./llm-engineering/04-structured-output.md) — JSON mode, schemas, function calling.
+- [05. Управление контекстом и токенами](./llm-engineering/05-context-management.md) — бюджет, обрезка, prompt caching.
+
+**Блок 2. RAG**
+
+- [06. Архитектура RAG](./llm-engineering/06-rag-architecture.md) — когда RAG, когда fine-tuning, когда long context.
+- [07. Чанкование и предобработка документов](./llm-engineering/07-chunking.md) — стратегии, метаданные, таблицы.
+- [08. Эмбеддинги и векторные базы](./llm-engineering/08-embeddings-vectordb.md) — pgvector, Qdrant, выбор модели и индекса.
+- [09. Hybrid search](./llm-engineering/09-hybrid-search.md) — BM25 + векторы + reranking, RRF.
+- [10. Продвинутый RAG](./llm-engineering/10-advanced-rag.md) — query rewriting, HyDE, multi-hop, adaptive retrieval.
+
+**Блок 3. Агенты и инструменты**
+
+- [11. Tools / function calling: основы](./llm-engineering/11-tools.md) — описание, передача, обработка ошибок.
+- [12. ReAct, планирование, многошаговые задачи](./llm-engineering/12-agents-react.md) — цикл, лимиты, защита от циклов.
+- [13. Оркестрация агентов](./llm-engineering/13-orchestration.md) — LangGraph, state machines, checkpoints, human-in-the-loop.
+- [14. MCP (Model Context Protocol)](./llm-engineering/14-mcp.md) — подключение внешних систем по стандарту.
+- [15. Multi-agent системы](./llm-engineering/15-multi-agent.md) — когда оправданы, а когда лишняя сложность.
+
+**Блок 4. Качество, безопасность, продакшн**
+
+- [16. Оффлайн-evals](./llm-engineering/16-evals-offline.md) — датасеты, метрики, eval в CI.
+- [17. LLM-as-a-judge](./llm-engineering/17-llm-as-judge.md) — калибровка, position/verbosity bias.
+- [18. Онлайн-метрики и A/B-тесты](./llm-engineering/18-online-metrics.md) — thumbs, CSAT, shadow deployment.
+- [19. Безопасность](./llm-engineering/19-security.md) — prompt injection, jailbreaks, data leakage, OWASP Top 10.
+- [20. Стоимость, latency, кэширование](./llm-engineering/20-cost-latency.md) — бюджет, routing, streaming, batching.
+
+**Блок 5. Кастомизация и локальный инференс**
+
+- [21. Fine-tuning: LoRA, QLoRA](./llm-engineering/21-fine-tuning.md) — когда нужно, подготовка данных, оценка.
+- [22. Локальный инференс](./llm-engineering/22-local-inference.md) — llama.cpp, vLLM, Ollama, квантование, GPU.
+- [23. Мониторинг LLM-приложений](./llm-engineering/23-monitoring.md) — logging, tracing, алёрты, drift, инциденты.
+
+**🎯 Капстон-проекты:**
+
+- [Капстон 1. RAG-ассистент на корпоративных документах](./llm-engineering/capstone-1-rag.md) — гибридный поиск + reranking + evals + мониторинг.
+- [Капстон 2. Агент для автоматизации рабочих задач](./llm-engineering/capstone-2-agent.md) — ReAct + tools + safety + память.
+- [Капстон 3. Fine-tune + локальный деплой специализированной модели](./llm-engineering/capstone-3-finetune.md) — LoRA + vLLM + экономика.
+
+**Что вы получите на выходе.** Понимание, как устроены LLM-системы изнутри. Опыт построения RAG с замером качества и стоимости. Агенты с защитой от деструктивных действий. Eval-фреймворк, который ловит регрессии до выкатки. Знание, когда fine-tune реально нужен, а когда хватает промпта и RAG. Локальный инференс с пониманием unit-экономики. И главное — умение **обосновывать архитектурные решения цифрами**, а не "посмотрите, как круто".
+
+▶︎ Начать: [llm-engineering/README.md](./llm-engineering/README.md)
+
+---
+
 ## 📚 Все курсы этого репозитория — одним списком
 
-Четыре модульных курса, каждый закрывает свой пласт работы в ML. Их можно проходить параллельно или последовательно — выбирайте по тому, что больше болит прямо сейчас.
+Пять модульных курсов, каждый закрывает свой пласт работы в ML и AI. Их можно проходить параллельно или последовательно — выбирайте по тому, что больше болит прямо сейчас.
 
 | Курс | О чём | Для кого | Ссылка |
 |------|--------|---------|--------|
 | 🧮 **Математика для ML** | 12 уроков: линал, матан, теорвер, оптимизация, математика трансформера. | Тем, кому не хватает базы. | [math-for-ml/](./math-for-ml/README.md) |
 | 🧠 **Нейросети с нуля** | 18 уроков + 3 капстона: перцептрон → CNN → Transformer → ViT → Diffusion → RLHF → GNN → distributed. | Тем, кто хочет разобраться в архитектурах изнутри. | [neural-networks/](./neural-networks/README.md) |
 | 📊 **Data Science** | 22 урока + 3 капстона: SQL, EDA, A/B, ML, MLOps, бизнес-метрики, презентация. | Тем, кто идёт в DA / DS / MLE. | [data-science/](./data-science/README.md) |
+| 🧠 **LLM Engineering** | 23 урока + 3 капстона: RAG, агенты, MCP, evals, fine-tuning, локальный инференс, мониторинг. | Тем, кто строит прод-приложения на LLM. | [llm-engineering/](./llm-engineering/README.md) |
 | 🤖 **Claude Code** | 18 уроков + cheatsheet: setup, CLAUDE.md, MCP, subagents, hooks, headless CI. | Тем, кто хочет встроить агента в рабочий процесс. | [claude-code/](./claude-code/README.md) |
 
-**Рекомендуемый порядок:** math → neural-networks → data-science → claude-code. Но если вы уже работаете аналитиком и хотите в ML — начинайте с data-science. Если вы разработчик, который хочет максимум выжать из LLM-инструментов — с claude-code.
+**Рекомендуемый порядок:** math → neural-networks → data-science → llm-engineering → claude-code. Но порядок не догма: если вы уже работаете аналитиком и хотите в ML — начинайте с data-science. Если строите AI-продукт прямо сейчас — с llm-engineering. Если хотите максимум выжать из агентов-разработчиков — с claude-code.
 
 ---
 
