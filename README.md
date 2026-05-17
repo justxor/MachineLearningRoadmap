@@ -78,6 +78,42 @@
 
 ---
 
+## 🗺️ Карта roadmap одним взглядом
+
+Эта диаграмма — общий вид пути. Стрелки показывают зависимости: что нужно знать, чтобы войти в следующий блок. Не маршрут «строго слева направо», а граф: блоки 4–6 можно проходить параллельно.
+
+```mermaid
+flowchart LR
+    A[Python + инструменты<br/>Git, Docker, IDE] --> B[Математика<br/>линал, матан, теорвер]
+    A --> C[NumPy / Pandas / SQL<br/>работа с данными]
+    B --> D[Классический ML<br/>scikit-learn, бустинг]
+    C --> D
+    D --> E[Deep Learning<br/>PyTorch, CNN, RNN]
+    E --> F[Трансформеры<br/>attention, GPT]
+    F --> G[LLM Engineering<br/>RAG, агенты, fine-tuning]
+    F --> H[Generative AI<br/>Diffusion, мультимодальность]
+    D --> I[MLOps<br/>Docker, K8s, мониторинг]
+    E --> I
+    G --> I
+    I --> J[Специализация<br/>NLP / CV / RecSys / RL / Safety]
+    G --> J
+    H --> J
+
+    classDef base fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+    classDef ml fill:#fff8e1,stroke:#f57f17,color:#bf360c
+    classDef dl fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+    classDef prod fill:#fce4ec,stroke:#c2185b,color:#880e4f
+    classDef spec fill:#f3e5f5,stroke:#6a1b9a,color:#4a148c
+
+    class A,B,C base
+    class D ml
+    class E,F,H dl
+    class G,I prod
+    class J spec
+```
+
+> 💡 Читать диаграмму так: до DL не имеет смысла бросаться, пока не закрыта математика и Python. До LLM — пока нет понимания трансформера. MLOps можно начинать параллельно с любым DL-блоком, как только появится первая модель, которую хочется выкатить.
+
 ## 🧭 5 правил выживания
 
 1. **Кода больше, чем теории.** Каждая тема закрывается своим артефактом: ноутбуком, репозиторием, демо.
@@ -87,6 +123,34 @@
 5. **Метрика важнее модели.** Сначала придумайте, как измерить успех, потом обучайте. Иначе вы оптимизируете шум.
 
 ---
+
+## ⏱️ Тайминг по фазам (10–15 ч/нед)
+
+Реалистичные ожидания: при 10–15 часах в неделю путь от нуля до уверенного джуна — 9–12 месяцев. До мидла — ещё год работы. Диаграмма ниже — ориентир, а не дедлайн: ваша скорость зависит от стартовой базы.
+
+```mermaid
+gantt
+    title Путь от нуля до мидла (~10–15 ч/нед)
+    dateFormat YYYY-MM-DD
+    axisFormat %b
+    section Старт
+    Python + инструменты         :done, 2026-01-01, 30d
+    Математика (база)            :active, 2026-01-15, 45d
+    section Базовый ML
+    Pandas / EDA / SQL           :2026-02-15, 30d
+    Классический ML + Kaggle     :2026-03-01, 45d
+    section Deep Learning
+    PyTorch, MLP, CNN            :2026-04-15, 45d
+    RNN, Attention, Transformer  :2026-05-15, 45d
+    section LLM и прод
+    LLM API, RAG, агенты         :2026-07-01, 60d
+    MLOps, Docker, мониторинг    :2026-08-01, 45d
+    section Работа
+    Портфолио + капстоун         :2026-09-01, 45d
+    Поиск работы, собесы         :2026-10-01, 60d
+```
+
+> 🎯 Если идёте интенсивнее (25+ часов в неделю), уплотните до 5–6 месяцев. С работой и семьёй — растяните до 18 месяцев. Главное — **не бросать**.
 
 ## 🗺️ Структура: 7 треков
 
@@ -230,6 +294,54 @@
 
 ---
 
+## 🔁 Жизненный цикл ML-системы в проде
+
+ML — не «обучил и забыл». Это замкнутый цикл: данные стареют, метрики деградируют, требования меняются. Сильный ML-инженер думает не «как обучить модель», а **как держать систему живой год**.
+
+```mermaid
+flowchart LR
+    subgraph DataLayer [Слой данных]
+        DS[Источники<br/>БД / API / стримы] --> ETL[ETL/ELT<br/>Airflow / dbt]
+        ETL --> DW[(DWH / Lake<br/>Parquet / Iceberg)]
+        DW --> FS[Feature Store<br/>Feast]
+    end
+
+    subgraph Training [Обучение]
+        FS --> EXP[Эксперименты<br/>MLflow / W&B]
+        EXP --> TRAIN[Тренировка<br/>PyTorch / sklearn]
+        TRAIN --> EVAL[Offline eval<br/>+ ablations]
+        EVAL --> REG[Model Registry<br/>версия + метаданные]
+    end
+
+    subgraph Serving [Прод-инференс]
+        REG --> DEPLOY[Деплой<br/>Docker / K8s]
+        DEPLOY --> CANARY[Canary / Shadow<br/>5% трафика]
+        CANARY --> PROD[Production<br/>FastAPI / vLLM / Triton]
+    end
+
+    subgraph Monitor [Мониторинг]
+        PROD --> LOGS[Logs / Traces<br/>OpenTelemetry]
+        LOGS --> DRIFT[Data drift<br/>PSI, Evidently]
+        LOGS --> METR[Качество<br/>online metrics]
+        DRIFT --> ALERT{Алерт?}
+        METR --> ALERT
+        ALERT -->|да| RETRAIN[Retrain trigger]
+        RETRAIN --> EXP
+    end
+
+    classDef data fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+    classDef train fill:#fff8e1,stroke:#f57f17,color:#bf360c
+    classDef serve fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+    classDef mon fill:#fce4ec,stroke:#c2185b,color:#880e4f
+
+    class DS,ETL,DW,FS data
+    class EXP,TRAIN,EVAL,REG train
+    class DEPLOY,CANARY,PROD serve
+    class LOGS,DRIFT,METR,ALERT,RETRAIN mon
+```
+
+> 🎯 Цикл, который замыкается в retrain — это то, чего нет у джунов. На senior-собеседовании ML system design половина баллов — за умение нарисовать вот эту картинку для конкретной задачи.
+
 ## 🎯 Трек 7 — Специализация (на выбор 1–2)
 
 К этому моменту у вас есть фундамент. Дальше — **глубина** в одной из областей:
@@ -253,6 +365,31 @@
 | **Guru / Vibe coder с пониманием** | Объясняет, как работает FlashAttention; реализует DPO, speculative decoding, кастомные ядра. Пишет свои статьи / open‑source. |
 
 ---
+
+## 🏔️ Пирамида уровней: что отличает грейды
+
+Каждый следующий уровень включает все навыки предыдущих и добавляет качественно новые: ответственность, архитектурные решения, влияние на команду.
+
+```mermaid
+flowchart TB
+    G[🧙 Guru / Vibe coder с пониманием<br/>FlashAttention, DPO, кастомные ядра, свои статьи]
+    S[💎 Senior ML / LLM Engineer<br/>архитектура систем, выбор инфры, менторство]
+    M[🥇 Middle ML<br/>трен. цикл с нуля, fine-tune LLM, RAG, evaluation, прод]
+    J[🥈 Junior ML<br/>табличные задачи, готовые CNN, метрики, чужие ноутбуки]
+    Base[🥉 База<br/>Python, SQL, Git, NumPy, Pandas, математика]
+
+    Base --> J --> M --> S --> G
+
+    classDef gold fill:#fff8e1,stroke:#f57f17,color:#bf360c
+    classDef sil fill:#eceff1,stroke:#455a64,color:#263238
+    classDef diam fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+    classDef guru fill:#f3e5f5,stroke:#6a1b9a,color:#4a148c
+
+    class Base,J sil
+    class M gold
+    class S diam
+    class G guru
+```
 
 ## 💰 Лучшие платные курсы
 
@@ -448,6 +585,52 @@ MIT. Используйте, форкайте, адаптируйте под с�
 - **Темы:** ReAct → Toolformer → function calling → **MCP (Model Context Protocol)** → multi-agent (CrewAI, AutoGen, LangGraph) → computer use агенты (Claude Computer Use, OpenAI Operator).
 - **Понимать:** почему **«один большой промпт» не масштабируется**, что такое **state machine для агента**, как ловить и чинить **infinite loops** и **hallucinated tools**.
 - **Артефакт:** агент-аналитик, который сам ходит в БД, пишет SQL, строит графики и присылает отчёт в Telegram. С полноценным трейсингом через **LangSmith / Langfuse / Phoenix**.
+
+### 🔴 Схема RAG-сервиса end-to-end
+
+Перед погружением в детали — общая картинка, как устроен боевой RAG-сервис. Эту диаграмму полезно держать в голове, когда читаете любую главу про retrieval, reranking или агентов.
+
+```mermaid
+flowchart LR
+    subgraph Ingest [📥 Индексация - офлайн]
+        D1[Документы<br/>PDF / MD / HTML] --> CH[Chunking<br/>500-1500 токенов<br/>overlap 100-200]
+        CH --> EMB1[Embedding<br/>bge / e5 / text-embedding-3]
+        EMB1 --> VDB[(Vector DB<br/>Qdrant / pgvector)]
+        CH --> BM25[(BM25 index<br/>Elasticsearch / tantivy)]
+    end
+
+    subgraph Query [🔍 Запрос - онлайн]
+        Q[Вопрос пользователя] --> QR[Query rewriting<br/>+ HyDE]
+        QR --> EMB2[Embedding запроса]
+        EMB2 --> VS[Vector search<br/>top-50]
+        QR --> KS[Keyword search<br/>top-50]
+        VDB -.-> VS
+        BM25 -.-> KS
+        VS --> RRF[RRF fusion<br/>+ rerank cross-encoder<br/>top-5]
+        KS --> RRF
+        RRF --> CTX[Context window<br/>prompt + чанки]
+        CTX --> LLM[LLM<br/>Claude / GPT / Llama]
+        LLM --> ANS[Ответ + источники]
+    end
+
+    subgraph Eval [📊 Eval и observability]
+        ANS --> LOG[Logging<br/>Langfuse / LangSmith]
+        LOG --> METRICS[Metrics<br/>faithfulness, recall@k, latency]
+        METRICS --> ALERT[Alerts<br/>drift, fail rate]
+    end
+
+    classDef ingest fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+    classDef query fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+    classDef eval fill:#fce4ec,stroke:#c2185b,color:#880e4f
+    classDef store fill:#fff8e1,stroke:#f57f17,color:#bf360c
+
+    class D1,CH,EMB1 ingest
+    class Q,QR,EMB2,VS,KS,RRF,CTX,LLM,ANS query
+    class LOG,METRICS,ALERT eval
+    class VDB,BM25 store
+```
+
+> 💡 Главные точки, где RAG обычно ломается: чанкинг (слишком мелко/крупно), отсутствие reranker'а, нет hybrid search, не меряют качество retrieval отдельно от качества генерации.
 
 ### 🔴 LLM evaluation — самое недооценённое
 
@@ -2086,6 +2269,48 @@ CPU и память в норме. Ошибок 5xx нет.
 
 ---
 
+## 🌳 Карьерные ветви: куда расти после первого оффера
+
+ML — не одна профессия, а дерево специализаций. Начинаете «универсалом», к мидлу выбираете 1–2 ветви, к сениору становитесь T-shape: одна ветвь глубоко, остальные — на уровне «могу собеседовать».
+
+```mermaid
+flowchart TB
+    Start([Junior ML<br/>универсал])
+
+    Start --> DS[Data Scientist<br/>гипотезы, A/B, бизнес]
+    Start --> MLE[ML Engineer<br/>пайплайны, инференс, latency]
+    Start --> MLO[MLOps Engineer<br/>инфра, K8s, observability]
+    Start --> RE[Research Engineer<br/>статьи, эксперименты]
+
+    DS --> DSr[Product DS / Lead DS]
+    DS --> Causal[Causal inference<br/>эконометрика]
+
+    MLE --> LLM[LLM / GenAI Engineer<br/>RAG, агенты, fine-tuning]
+    MLE --> CV[Computer Vision<br/>детекция, сегментация, 3D]
+    MLE --> RecSys[Recommender Systems<br/>ranking, retrieval]
+    MLE --> RL[Reinforcement Learning<br/>RLHF, robotics]
+
+    MLO --> Platform[ML Platform<br/>feature store, GPU orchestration]
+    MLO --> SRE[ML SRE<br/>надёжность, инциденты]
+
+    RE --> RS[Research Scientist<br/>PhD, AI labs]
+    RE --> Safety[AI Safety / Alignment<br/>red-teaming, interpretability]
+
+    classDef start fill:#fff8e1,stroke:#f57f17,color:#bf360c
+    classDef ml fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+    classDef ds fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+    classDef ops fill:#fce4ec,stroke:#c2185b,color:#880e4f
+    classDef research fill:#f3e5f5,stroke:#6a1b9a,color:#4a148c
+
+    class Start start
+    class DS,DSr,Causal ds
+    class MLE,LLM,CV,RecSys,RL ml
+    class MLO,Platform,SRE ops
+    class RE,RS,Safety research
+```
+
+> 💡 Самые горячие ветви в 2026: **LLM/GenAI Engineer** и **ML Platform**. Самые недооценённые: **RecSys** (большие деньги в e-commerce) и **AI Safety** (быстро растущая ниша при дефиците людей).
+
 ## 🎤 Подготовка к собеседованиям ML-инженера
 
 Собес на ML-позицию в 2026 — это 4–6 этапов. Готовьтесь системно, не «методом тыка».
@@ -2937,5 +3162,47 @@ Microsoft запустили официальный сертификационн
 **Рекомендуемый порядок:** math → neural-networks → data-science → llm-engineering → claude-code. Но порядок не догма: если вы уже работаете аналитиком и хотите в ML — начинайте с data-science. Если строите AI-продукт прямо сейчас — с llm-engineering. Если хотите максимум выжать из агентов-разработчиков — с claude-code.
 
 ---
+
+## 🗺️ Граф курсов репозитория
+
+5 модульных курсов этого репозитория связаны между собой. Стрелки — рекомендуемые предусловия: что желательно (но не обязательно) знать перед стартом следующего курса. Сами стрелки не догма — двигайтесь от боли: если строите LLM-прод прямо сейчас, идите в llm-engineering, остальное добирайте по ходу.
+
+```mermaid
+flowchart LR
+    M[🧮 math-for-ml<br/>12 уроков<br/>линал, матан, теорвер, оптимизация]
+    N[🧠 neural-networks<br/>18 уроков + 3 капстона<br/>от перцептрона до distributed training]
+    D[📊 data-science<br/>22 урока + 3 капстона<br/>SQL, A/B, ML, MLOps, бизнес]
+    L[🧠 llm-engineering<br/>23 урока + 3 капстона<br/>RAG, агенты, fine-tuning, прод]
+    C[🤖 claude-code<br/>18 уроков + cheatsheet<br/>агент в терминале, MCP, hooks]
+
+    M --> N
+    M -.базовая статистика.-> D
+    N --> L
+    D --> L
+    N -.не обязательно.-> C
+    L -.для агентских сценариев.-> C
+
+    classDef math fill:#fff8e1,stroke:#f57f17,color:#bf360c
+    classDef nn fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+    classDef ds fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+    classDef llm fill:#f3e5f5,stroke:#6a1b9a,color:#4a148c
+    classDef agent fill:#fce4ec,stroke:#c2185b,color:#880e4f
+
+    class M math
+    class N nn
+    class D ds
+    class L llm
+    class C agent
+```
+
+### Рекомендуемые стартовые сценарии
+
+| Кто вы | С чего начать | Почему |
+|---|---|---|
+| **Новичок без базы** | math-for-ml → neural-networks | Без математики DL — это магия; без DL не понятен ни один современный AI-продукт |
+| **Аналитик / разработчик** | data-science → llm-engineering | У вас уже есть Python и работа с данными — идите туда, где ROI выше |
+| **Строите AI-продукт сейчас** | llm-engineering + claude-code | Прикладной максимум: RAG/агенты в проде + ускорение разработки агентом |
+| **Идёте в research** | math-for-ml → neural-networks → статьи | Нужна глубина, а не широта; читайте 1 paper в неделю с реализацией |
+| **Хочу прокачать вайб-кодинг** | claude-code → llm-engineering | Сначала научитесь жить с агентом, потом — строить с ним продукты |
 
 > Этот roadmap по машинному обучению — карта местности, а не маршрут. Маршрут вы прокладываете сами, исходя из задач, рынка и того, что вас зажигает. Удачи на пути от первого `import numpy` до собственной обученной LLM.
