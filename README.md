@@ -2815,6 +2815,70 @@ Microsoft запустили официальный сертификационн
 
 ▶︎ Начать: [claude-code/README.md](./claude-code/README.md)
 
+## 📊 Data Science — прикладной курс от аналитика до ML в проде
+
+Четвёртый модуль этого репозитория — курс [**data-science/**](./data-science/README.md). Если [math-for-ml](./math-for-ml/README.md) даёт язык, [neural-networks](./neural-networks/README.md) — инструмент, а [claude-code](./claude-code/README.md) — агента, то DS-курс учит решать **бизнес-задачи данными**: от SQL-выгрузки и A/B-теста до модели в проде с мониторингом.
+
+**22 урока, 6 блоков, 3 капстона. Без воды, с конкретными артефактами в каждом уроке.**
+
+**Блок 1. Фундамент DS**
+- [01. Роли в команде](./data-science/01-roles.md) — DA / DS / MLE / DE, цикл DS-проекта.
+- [02. Инструменты](./data-science/02-tools.md) — Python, Jupyter, Git, uv, структура проекта.
+- [03. SQL для DS](./data-science/03-sql.md) — оконные функции, CTE, оптимизация.
+- [04. Pandas и NumPy](./data-science/04-pandas-numpy.md) — векторизация, groupby, память, parquet.
+
+**Блок 2. Работа с данными**
+- [05. Сбор данных](./data-science/05-data-collection.md) — API, парсинг, retry, rate-limit.
+- [06. Очистка и валидация](./data-science/06-cleaning.md) — пропуски, выбросы, pandera/Great Expectations.
+- [07. EDA по чек-листу](./data-science/07-eda.md) — 10 шагов от структуры до гипотез.
+- [08. Feature engineering](./data-science/08-feature-engineering.md) — пайплайны, target encoding без утечек.
+- [09. Визуализация](./data-science/09-visualization.md) — matplotlib, seaborn, plotly, принципы графиков.
+
+**Блок 3. Статистика и эксперименты**
+- [10. Прикладная статистика](./data-science/10-statistics.md) — CI, p-value, bootstrap, мощность.
+- [11. A/B-тесты](./data-science/11-ab-testing.md) — дизайн, MDE, CUPED, SRM, ошибки.
+- [12. Causal inference](./data-science/12-causal.md) — DAG, propensity matching, DiD, uplift.
+
+**Блок 4. Машинное обучение**
+- [13. Постановка ML-задачи](./data-science/13-ml-canvas.md) — ML-канвас из 13 пунктов.
+- [14. Бейзлайны и метрики](./data-science/14-baselines-metrics.md) — метрики по типам задач, калибровка.
+- [15. Валидация и переобучение](./data-science/15-validation.md) — CV-схемы, утечки, adversarial validation.
+- [16. Бустинги](./data-science/16-boosting.md) — XGBoost, LightGBM, CatBoost и Optuna.
+- [17. Интерпретация моделей](./data-science/17-interpretation.md) — SHAP, permutation importance, PDP.
+
+**Блок 5. Продакшн**
+- [18. От ноутбука к сервису](./data-science/18-productionization.md) — FastAPI + Docker + pydantic.
+- [19. MLOps](./data-science/19-mlops.md) — MLflow, DVC, GitHub Actions, model registry.
+- [20. Мониторинг и drift](./data-science/20-monitoring.md) — PSI, Evidently, retrain-регламент.
+
+**Блок 6. Бизнес и коммуникация**
+- [21. ML и бизнес-метрики](./data-science/21-business-metrics.md) — иерархия метрик, expected value, Goodhart’s law.
+- [22. Презентация результатов](./data-science/22-communication.md) — TL;DR, decision memo, работа со стейкхолдерами.
+
+**🎯 Капстон-проекты:**
+- [Капстон 1. End-to-end на табличных данных](./data-science/capstone-1-tabular.md) — от МЛ-канваса до Docker API.
+- [Капстон 2. A/B-тест с отчётом](./data-science/capstone-2-ab.md) — дизайн, симуляция, CUPED, SRM.
+- [Капстон 3. Дашборд + модель в проде](./data-science/capstone-3-dashboard.md) — пайплайн данных, API, Streamlit, monitoring.
+
+**Что вы получите на выходе.** Умение вести задачу от вопроса «почему просела конверсия» до выкатки модели в прод, ответственность за каждое число в отчёте и четыре портфолио-проекта, которые можно показать на собеседовании.
+
+▶︎ Начать: [data-science/README.md](./data-science/README.md)
+
+---
+
+## 📚 Все курсы этого репозитория — одним списком
+
+Четыре модульных курса, каждый закрывает свой пласт работы в ML. Их можно проходить параллельно или последовательно — выбирайте по тому, что больше болит прямо сейчас.
+
+| Курс | О чём | Для кого | Ссылка |
+|------|--------|---------|--------|
+| 🧮 **Математика для ML** | 12 уроков: линал, матан, теорвер, оптимизация, математика трансформера. | Тем, кому не хватает базы. | [math-for-ml/](./math-for-ml/README.md) |
+| 🧠 **Нейросети с нуля** | 18 уроков + 3 капстона: перцептрон → CNN → Transformer → ViT → Diffusion → RLHF → GNN → distributed. | Тем, кто хочет разобраться в архитектурах изнутри. | [neural-networks/](./neural-networks/README.md) |
+| 📊 **Data Science** | 22 урока + 3 капстона: SQL, EDA, A/B, ML, MLOps, бизнес-метрики, презентация. | Тем, кто идёт в DA / DS / MLE. | [data-science/](./data-science/README.md) |
+| 🤖 **Claude Code** | 18 уроков + cheatsheet: setup, CLAUDE.md, MCP, subagents, hooks, headless CI. | Тем, кто хочет встроить агента в рабочий процесс. | [claude-code/](./claude-code/README.md) |
+
+**Рекомендуемый порядок:** math → neural-networks → data-science → claude-code. Но если вы уже работаете аналитиком и хотите в ML — начинайте с data-science. Если вы разработчик, который хочет максимум выжать из LLM-инструментов — с claude-code.
+
 ---
 
 > Этот roadmap по машинному обучению — карта местности, а не маршрут. Маршрут вы прокладываете сами, исходя из задач, рынка и того, что вас зажигает. Удачи на пути от первого `import numpy` до собственной обученной LLM.
