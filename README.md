@@ -3147,6 +3147,57 @@ Microsoft запустили официальный сертификационн
 
 ---
 
+## 👁️ Computer Vision Engineering — практический курс по CV в проде
+
+Шестой модульный курс — [**computer-vision/**](./computer-vision/README.md). От пикселей и классических алгоритмов OpenCV до Vision Transformers, VLM, edge inference и production-деплоя на NVIDIA Triton.
+
+**21 урок, 4 блока, 3 капстон-проекта. Без академических доказательств — только то, что реально нужно CV-инженеру в 2026.**
+
+**Блок 1. Фундамент CV**
+
+- [01. Цифровые изображения и базовые операции](./computer-vision/01-image-basics.md) — пиксели, цветовые пространства, OpenCV, PIL, normalize для DL.
+- [02. Классические алгоритмы CV](./computer-vision/02-classical-cv.md) — фильтры, edges, SIFT/ORB, homography, contours, Hough.
+- [03. Аугментации и data pipelines](./computer-vision/03-augmentations.md) — albumentations, MixUp/CutMix, TTA, FFCV/webdataset.
+- [04. Метрики CV](./computer-vision/04-metrics.md) — IoU, mAP, mIoU, OKS, calibration, ECE.
+- [05. Backbones и transfer learning](./computer-vision/05-backbones.md) — timm, ResNet/EfficientNet/ConvNeXt/ViT/Swin/DINOv2, discriminative LR, EMA.
+
+**Блок 2. Основные задачи**
+
+- [06. Классификация изображений](./computer-vision/06-classification.md) — production-ready бейзлайн, imbalance, multi-label, OOD detection.
+- [07. Детекция объектов](./computer-vision/07-detection.md) — YOLO v11, RT-DETR, NMS, anchor-free, active learning.
+- [08. Семантическая сегментация](./computer-vision/08-semantic-segmentation.md) — U-Net, DeepLab, Mask2Former, SAM 2, Dice/Tversky loss.
+- [09. Instance и panoptic сегментация](./computer-vision/09-instance-segmentation.md) — Mask R-CNN, YOLO-seg, Mask2Former, SAM + детектор pattern.
+- [10. Keypoints и pose estimation](./computer-vision/10-keypoints-pose.md) — HRNet, MediaPipe, RTMPose, heatmap regression.
+- [11. Object tracking](./computer-vision/11-tracking.md) — SORT, DeepSORT, ByteTrack, MOTA/IDF1/HOTA, counting через crossing lines.
+
+**Блок 3. Vision Transformers и мультимодальность**
+
+- [12. Vision Transformers](./computer-vision/12-vision-transformers.md) — ViT, Swin, MAE, DINOv2 для feature extraction и retrieval.
+- [13. CLIP и мультимодальные модели](./computer-vision/13-clip-multimodal.md) — zero-shot, image-text retrieval, SigLIP, BLIP-2, Grounding DINO.
+- [14. VLM: vision-language models](./computer-vision/14-vlm.md) — LLaVA, Qwen2-VL, InternVL, прикладные сценарии и ограничения.
+- [15. Генеративные модели для CV](./computer-vision/15-generative-cv.md) — Stable Diffusion, Flux, ControlNet, super-resolution, inpainting, синтетика.
+
+**Блок 4. Production**
+
+- [16. OCR и распознавание документов](./computer-vision/16-ocr.md) — Tesseract, PaddleOCR, Donut, LayoutLMv3, VLM для документов.
+- [17. Видео-аналитика](./computer-vision/17-video-analytics.md) — action recognition, MViT, VideoMAE, VLM для видео, real-time pipelines.
+- [18. Edge и mobile inference](./computer-vision/18-edge-mobile.md) — ONNX, CoreML, TFLite, MLX, TensorRT, INT8 квантование, MobileNet/MobileViT.
+- [19. Деплой CV-моделей в прод](./computer-vision/19-production-deploy.md) — Triton, BentoML, dynamic batching, GPU sharing, MIG/MPS.
+- [20. Мониторинг и MLOps для CV](./computer-vision/20-monitoring-mlops.md) — drift detection через embeddings, shadow deploy, A/B, retraining strategy.
+- [21. Безопасность и privacy в CV](./computer-vision/21-safety-privacy.md) — adversarial, face/PII redaction, deepfake detection, GDPR/EU AI Act.
+
+**🎯 Капстон-проекты:**
+
+- [Капстон 1. End-to-end детектор объектов на собственном датасете](./computer-vision/capstone-1-detector.md) — от сбора и разметки до Docker + HF Spaces demo.
+- [Капстон 2. Real-time видео-аналитика с трекингом](./computer-vision/capstone-2-video-analytics.md) — YOLO + ByteTrack + TimescaleDB + Grafana + alerts.
+- [Капстон 3. Multi-modal RAG над изображениями и документами](./computer-vision/capstone-3-multimodal-rag.md) — CLIP + bge + Qdrant + VLM + Streamlit UI.
+
+**Что вы получите на выходе.** Понимание CV-стека от классики до DINOv2/SAM/VLM. 6+ практически реализованных архитектур. Опыт деплоя в Triton, edge-конвертации в ONNX/CoreML/TFLite. Понимание MLOps для CV: drift detection, shadow deployment, retraining. Знание carrier-критичных вопросов: privacy, bias, adversarial robustness. И главное — 3 портфолио-проекта уровня senior CV engineer.
+
+▶︎ Начать: [computer-vision/README.md](./computer-vision/README.md)
+
+---
+
 ## 📚 Все курсы этого репозитория — одним списком
 
 Пять модульных курсов, каждый закрывает свой пласт работы в ML и AI. Их можно проходить параллельно или последовательно — выбирайте по тому, что больше болит прямо сейчас.
@@ -3157,9 +3208,10 @@ Microsoft запустили официальный сертификационн
 | 🧠 **Нейросети с нуля** | 18 уроков + 3 капстона: перцептрон → CNN → Transformer → ViT → Diffusion → RLHF → GNN → distributed. | Тем, кто хочет разобраться в архитектурах изнутри. | [neural-networks/](./neural-networks/README.md) |
 | 📊 **Data Science** | 22 урока + 3 капстона: SQL, EDA, A/B, ML, MLOps, бизнес-метрики, презентация. | Тем, кто идёт в DA / DS / MLE. | [data-science/](./data-science/README.md) |
 | 🧠 **LLM Engineering** | 23 урока + 3 капстона: RAG, агенты, MCP, evals, fine-tuning, локальный инференс, мониторинг. | Тем, кто строит прод-приложения на LLM. | [llm-engineering/](./llm-engineering/README.md) |
+| 👁️ **Computer Vision** | 21 урок + 3 капстона: классика → DL → ViT/VLM → OCR/видео/edge → production. | Тем, кто специализируется в CV. | [computer-vision/](./computer-vision/README.md) |
 | 🤖 **Claude Code** | 18 уроков + cheatsheet: setup, CLAUDE.md, MCP, subagents, hooks, headless CI. | Тем, кто хочет встроить агента в рабочий процесс. | [claude-code/](./claude-code/README.md) |
 
-**Рекомендуемый порядок:** math → neural-networks → data-science → llm-engineering → claude-code. Но порядок не догма: если вы уже работаете аналитиком и хотите в ML — начинайте с data-science. Если строите AI-продукт прямо сейчас — с llm-engineering. Если хотите максимум выжать из агентов-разработчиков — с claude-code.
+**Рекомендуемый порядок:** math → neural-networks → data-science → llm-engineering → computer-vision → claude-code. Но порядок не догма: если вы уже работаете аналитиком и хотите в ML — начинайте с data-science. Если строите AI-продукт прямо сейчас — с llm-engineering. Если хотите максимум выжать из агентов-разработчиков — с claude-code.
 
 ---
 
@@ -3204,5 +3256,22 @@ flowchart LR
 | **Строите AI-продукт сейчас** | llm-engineering + claude-code | Прикладной максимум: RAG/агенты в проде + ускорение разработки агентом |
 | **Идёте в research** | math-for-ml → neural-networks → статьи | Нужна глубина, а не широта; читайте 1 paper в неделю с реализацией |
 | **Хочу прокачать вайб-кодинг** | claude-code → llm-engineering | Сначала научитесь жить с агентом, потом — строить с ним продукты |
+
+## 📖 Глоссарий и подготовка к собеседованиям
+
+Помимо курсов в репозитории есть два прикладных модуля, которые сильно ускоряют работу:
+
+**[📖 Глоссарий ML / DL / LLM / MLOps](./glossary.md)** — 200+ терминов с короткими определениями, примерами и ссылками на уроки. От «overfitting» до «PagedAttention», от «PSI» до «GRPO». Структурирован по 17 секциям: базовые понятия, метрики, архитектуры, RAG, агенты, MLOps, безопасность, карьера. Если запутались в термине из статьи или собеса — сюда.
+
+**[🎤 Подготовка к ML-собеседованиям](./interview-prep/README.md)** — полноценный модуль для системной подготовки к 4-6 этапам типичного ML-собеса. Внутри:
+
+- [30 вопросов классического ML](./interview-prep/01-ml-classic.md) — метрики, валидация, регуляризация, бустинг.
+- [30 вопросов Deep Learning](./interview-prep/02-deep-learning.md) — backprop, оптимизаторы, CNN, RNN, attention.
+- [30 вопросов LLM/RAG/агенты](./interview-prep/03-llm-rag-agents.md) — токенизация, RAG, fine-tuning, MCP, ReAct.
+- [10 ML system design кейсов](./interview-prep/04-system-design.md) — рекомендации YouTube, поиск Instagram, fraud detection, чат-бот, модерация и др. Каждый — с разбором по единой 8-шаговой схеме.
+- [Coding-интервью](./interview-prep/05-coding.md) — топ-25 задач LeetCode, SQL, ML с нуля (kNN, K-Means, attention, softmax с нуля).
+- [Behavioral + переговоры по офферу](./interview-prep/06-behavioral.md) — STAR, 15 типовых вопросов, скрипты для negotiation, market data sources.
+
+Плюс 4-недельный план подготовки и финальный чек-лист готовности (25/35/45 галочек = junior/middle/senior).
 
 > Этот roadmap по машинному обучению — карта местности, а не маршрут. Маршрут вы прокладываете сами, исходя из задач, рынка и того, что вас зажигает. Удачи на пути от первого `import numpy` до собственной обученной LLM.
