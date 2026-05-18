@@ -3274,4 +3274,30 @@ flowchart LR
 
 Плюс 4-недельный план подготовки и финальный чек-лист готовности (25/35/45 галочек = junior/middle/senior).
 
+## 🧪 Practice Labs — 25 прикладных лабораторий
+
+Практика побеждает теорию. В модуле [practice-labs/](./practice-labs/) собрано **25 самостоятельных мини-проектов** с упором на руки: своя задача, свой код, своя метрика, свой отчёт. Каждая лаба — это законченный артефакт для портфолио с критериями приёмки, анти-паттернами и расширениями.
+
+### Что внутри
+
+**Классический ML:** [house prices](./practice-labs/01-house-prices.md), [churn + SHAP](./practice-labs/02-churn-shap.md), [credit scoring](./practice-labs/03-credit-scoring.md), [demand forecast](./practice-labs/04-demand-forecast.md), [anomaly detection](./practice-labs/05-anomaly-logs.md).
+
+**Deep Learning и CV:** [image classifier с нуля](./practice-labs/06-image-classifier.md), [fine-tune детектора](./practice-labs/07-finetune-detector.md), [medical segmentation](./practice-labs/08-medical-segmentation.md), [face anti-spoofing](./practice-labs/09-face-antispoofing.md), [real-time tracker](./practice-labs/10-realtime-tracker.md).
+
+**NLP и LLM:** [sentiment HF](./practice-labs/11-sentiment-hf.md), [NER для документов](./practice-labs/12-ner-docs.md), [RAG over PDF](./practice-labs/13-rag-pdf.md), [LLM-агент](./practice-labs/14-llm-agent.md), [LoRA fine-tune Llama](./practice-labs/15-llm-finetune.md), [LLM evaluation harness](./practice-labs/16-llm-eval.md).
+
+**MLOps и production:** [ML-сервис FastAPI+Docker+CI](./practice-labs/17-ml-service.md), [feature store + retraining](./practice-labs/18-feature-store.md), [drift monitoring](./practice-labs/19-drift-monitoring.md), [A/B-тест end-to-end](./practice-labs/20-ab-test.md).
+
+**Recsys, поиск, speech, мультимодальность:** [collaborative filtering](./practice-labs/21-recsys-implicit.md), [two-tower recsys](./practice-labs/22-two-tower.md), [семантический поиск](./practice-labs/23-semantic-search.md), [Whisper + диаризация](./practice-labs/24-asr-diarization.md), [multimodal RAG](./practice-labs/25-multimodal-rag.md).
+
+### Уровни и время
+
+- 🟢 **Junior** (4–8 часов): базовый пайплайн, понимание задачи. Лабы 01, 06, 11.
+- 🟡 **Middle** (1–3 дня): качество, валидация, инженерия. Лабы 02–04, 07, 12, 13, 17, 21, 23, 24.
+- 🔴 **Senior** (1–2 недели): production, мониторинг, edge cases. Лабы 05, 08–10, 14–16, 18–20, 22, 25.
+
+Каждая лаба имеет одинаковую структуру: цель → датасет → минимальный пайплайн → метрики → расширения → критерии приёмки → анти-паттерны. Берите по одной в неделю — за полгода соберёте портфолио, которое реально продаёт на собеседовании.
+
+[📂 Открыть Practice Labs](./practice-labs/)
+
 > Этот roadmap по машинному обучению — карта местности, а не маршрут. Маршрут вы прокладываете сами, исходя из задач, рынка и того, что вас зажигает. Удачи на пути от первого `import numpy` до собственной обученной LLM.
