@@ -1,3 +1,25 @@
+
+
+---
+
+## 📊 Лучшие Практики и Сниппеты Data Science
+
+Готовые к использованию сниппеты кода и лучшие практики для всех этапов DS проекта.
+
+📁 [Перейти в папку ds-best-practices/](ds-best-practices/)
+
+| # | Тема | Описание | Ссылка |
+|---|------|----------|--------|
+| 01 | 🔍 EDA | Полный разведочный анализ данных, профилирование, визуализация распределений | [eda-snippets.md](ds-best-practices/eda-snippets.md) |
+| 02 | 🛠️ Feature Engineering | Target encoding, временные признаки, взаимодействия, отбор признаков | [feature-engineering.md](ds-best-practices/feature-engineering.md) |
+| 03 | ⚙️ Preprocessing | Импутация пропусков, масштабирование, кодирование, выбросы, дисбаланс | [preprocessing.md](ds-best-practices/preprocessing.md) |
+| 04 | 📈 Visualization | Matplotlib, Seaborn, Plotly — ROC, confusion matrix, кластеры, SHAP | [visualization.md](ds-best-practices/visualization.md) |
+| 05 | 🤖 Model Training | Train/Val/Test split, кросс-валидация, Optuna, OOF, MLflow | [model-training.md](ds-best-practices/model-training.md) |
+| 06 | 📏 Evaluation | Classification/Regression метрики, Bootstrap CI, анализ ошибок | [evaluation.md](ds-best-practices/evaluation.md) |
+| 07 | 🔗 Pipelines | sklearn Pipeline, кастомные трансформеры, сохранение моделей | [pipelines.md](ds-best-practices/pipelines.md) |
+| 08 | ⏱️ Time Series | Признаки для TS, Walk-Forward CV, Prophet, обнаружение аномалий | [time-series.md](ds-best-practices/time-series.md) |
+| 09 | 📝 NLP | TF-IDF, Word2Vec, BERT эмбеддинги, классификация текста, LDA | [nlp-snippets.md](ds-best-practices/nlp-snippets.md) |
+| 10 | 🚀 Deployment | FastAPI сервис, Docker, дрейф данных, батчевые предсказания, A/B тест | [deployment.md](ds-best-practices/deployment.md) |
 # 🤖 Machine Learning Roadmap: от базы до гуру вайбкодинга
 
 > **Карта обучения машинному обучению (Machine Learning, Deep Learning, LLM, Generative AI, MLOps)** — от первого `import numpy` до уровня инженера, который понимает, **как ИИ работает внутри**, и может писать прод‑системы, а не только дёргать API.
