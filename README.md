@@ -3286,7 +3286,37 @@ flowchart LR
 
 **NLP и LLM:** [sentiment HF](./practice-labs/11-sentiment-hf.md), [NER для документов](./practice-labs/12-ner-docs.md), [RAG over PDF](./practice-labs/13-rag-pdf.md), [LLM-агент](./practice-labs/14-llm-agent.md), [LoRA fine-tune Llama](./practice-labs/15-llm-finetune.md), [LLM evaluation harness](./practice-labs/16-llm-eval.md).
 
-**MLOps и production:** [ML-сервис FastAPI+Docker+CI](./practice-labs/17-ml-service.md), [feature store + retraining](./practice-labs/18-feature-store.md), [drift monitoring](./practice-labs/19-drift-monitoring.md), [A/B-тест end-to-end](./practice-labs/20-ab-test.md).
+**MLOps и production:** [ML-сервис FastAPI+Docker+CI](./practice-labs/17-ml-service.md), [feature store + retraining](./practice-labs/18-feature-
+
+---
+
+## 🧠 Курс: Алгоритмы Машинного Обучения
+
+> **Полный практический курс по классическим алгоритмам ML** — фундамент для понимания нейронных сетей и LLM. 15 детальных уроков с теорией, математикой, кодом на Python и практическими заданиями.
+
+**📁 Папка курса:** [ml-algorithms/](ml-algorithms/)
+
+### 📚 Уроки курса
+
+| № | Урок | Алгоритмы | Время |
+|---|------|-----------|-------|
+| 01 | [Линейная регрессия](ml-algorithms/lesson-01-linear-regression.md) | Linear Regression, OLS, Gradient Descent | ~3 ч |
+| 02 | [Регуляризация: Ridge, Lasso, ElasticNet](ml-algorithms/lesson-02-regularization.md) | L1/L2 regularization | ~2 ч |
+| 03 | [Логистическая регрессия](ml-algorithms/lesson-03-logistic-regression.md) | Logistic Regression, Sigmoid, Cross-Entropy | ~3 ч |
+| 04 | [Метрики качества ML моделей](ml-algorithms/lesson-04-metrics.md) | Accuracy, Precision, Recall, F1, ROC-AUC | ~2 ч |
+| 05 | [Деревья решений](ml-algorithms/lesson-05-decision-trees.md) | Decision Tree, Gini, Entropy, CART | ~3 ч |
+| 06 | [Метод ближайших соседей (KNN)](ml-algorithms/lesson-06-knn.md) | KNN, Distance metrics, KD-tree | ~2 ч |
+| 07 | [Random Forest](ml-algorithms/lesson-07-random-forest.md) | Random Forest, Bagging, Feature importance | ~3 ч |
+| 08 | [Gradient Boosting: теория](ml-algorithms/lesson-08-gradient-boosting-theory.md) | GBM, Weak learners, Functional GD | ~3 ч |
+| 09 | [XGBoost, LightGBM, CatBoost](ml-algorithms/lesson-09-boosting-libraries.md) | XGBoost, LightGBM, CatBoost, Optuna | ~4 ч |
+| 10 | [Стекинг и блендинг](ml-algorithms/lesson-10-stacking.md) | Stacking, Blending, Meta-learner | ~2 ч |
+| 11 | [Кластеризация: K-Means и DBSCAN](ml-algorithms/lesson-11-clustering.md) | K-Means, DBSCAN, Silhouette | ~3 ч |
+| 12 | [Иерархическая кластеризация и GMM](ml-algorithms/lesson-12-hierarchical-gmm.md) | Hierarchical, GMM, EM algorithm | ~2 ч |
+| 13 | [Метод главных компонент (PCA)](ml-algorithms/lesson-13-pca.md) | PCA, SVD, Explained variance | ~3 ч |
+| 14 | [t-SNE и UMAP](ml-algorithms/lesson-14-tsne-umap.md) | t-SNE, UMAP, Manifold learning | ~2 ч |
+| 15 | [Итоговый проект: ML Pipeline](ml-algorithms/lesson-15-final-project.md) | EDA, Feature engineering, Ensemble, Kaggle | ~5 ч |
+
+**Итого: ~42 часа практики** | **[→ Открыть курс](ml-algorithms/)**store.md), [drift monitoring](./practice-labs/19-drift-monitoring.md), [A/B-тест end-to-end](./practice-labs/20-ab-test.md).
 
 **Recsys, поиск, speech, мультимодальность:** [collaborative filtering](./practice-labs/21-recsys-implicit.md), [two-tower recsys](./practice-labs/22-two-tower.md), [семантический поиск](./practice-labs/23-semantic-search.md), [Whisper + диаризация](./practice-labs/24-asr-diarization.md), [multimodal RAG](./practice-labs/25-multimodal-rag.md).
 
