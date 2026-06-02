@@ -2,6 +2,28 @@
 
 ---
 
+## 🧪 Задачи для Самостоятельной Практики
+
+Практические задания по всем ключевым темам Data Science. Каждая задача — реальный бизнес-сценарий с чётким условием, синтетическим датасетом и критериями оценки.
+
+📁 [Задания → practice-tasks/](practice-tasks/) | 📁 [Разборы → practice-solutions/](practice-solutions/)
+
+| # | Тема | Сложность | Задание | Разбор |
+|---|------|-----------|---------|--------|
+| 01 | 🔍 EDA | ⭐⭐ | [task-01-eda.md](practice-tasks/task-01-eda.md) | [solution-01-eda.md](practice-solutions/solution-01-eda.md) |
+| 02 | 🛠️ Feature Engineering | ⭐⭐⭐ | [task-02-features.md](practice-tasks/task-02-features.md) | [solution-02-features.md](practice-solutions/solution-02-features.md) |
+| 03 | ⚙️ Preprocessing | ⭐⭐ | [task-03-preprocessing.md](practice-tasks/task-03-preprocessing.md) | [solution-03-preprocessing.md](practice-solutions/solution-03-preprocessing.md) |
+| 04 | 📈 Visualization | ⭐⭐ | [task-04-visualization.md](practice-tasks/task-04-visualization.md) | [solution-04-visualization.md](practice-solutions/solution-04-visualization.md) |
+| 05 | 🤖 Model Training | ⭐⭐⭐ | [task-05-modeling.md](practice-tasks/task-05-modeling.md) | [solution-05-modeling.md](practice-solutions/solution-05-modeling.md) |
+| 06 | 📏 Evaluation | ⭐⭐⭐ | [task-06-evaluation.md](practice-tasks/task-06-evaluation.md) | [solution-06-evaluation.md](practice-solutions/solution-06-evaluation.md) |
+| 07 | 🔗 Pipelines | ⭐⭐⭐ | [task-07-pipelines.md](practice-tasks/task-07-pipelines.md) | [solution-07-pipelines.md](practice-solutions/solution-07-pipelines.md) |
+| 08 | ⏱️ Time Series | ⭐⭐⭐⭐ | [task-08-timeseries.md](practice-tasks/task-08-timeseries.md) | [solution-08-timeseries.md](practice-solutions/solution-08-timeseries.md) |
+| 09 | 📝 NLP | ⭐⭐⭐ | [task-09-nlp.md](practice-tasks/task-09-nlp.md) | [solution-09-nlp.md](practice-solutions/solution-09-nlp.md) |
+| 10 | 🏆 Финальный проект | ⭐⭐⭐⭐⭐ | [task-10-final.md](practice-tasks/task-10-final.md) | [solution-10-final.md](practice-solutions/solution-10-final.md) |
+
+
+---
+
 ## 📊 Лучшие Практики и Сниппеты Data Science
 
 Готовые к использованию сниппеты кода и лучшие практики для всех этапов DS проекта.
