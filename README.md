@@ -1,3 +1,4 @@
+# 🤖 Machine Learning Roadmap: от базы до гуру вайбкодинга
 
 
 ---
@@ -42,7 +43,6 @@
 | 08 | ⏱️ Time Series | Признаки для TS, Walk-Forward CV, Prophet, обнаружение аномалий | [time-series.md](ds-best-practices/time-series.md) |
 | 09 | 📝 NLP | TF-IDF, Word2Vec, BERT эмбеддинги, классификация текста, LDA | [nlp-snippets.md](ds-best-practices/nlp-snippets.md) |
 | 10 | 🚀 Deployment | FastAPI сервис, Docker, дрейф данных, батчевые предсказания, A/B тест | [deployment.md](ds-best-practices/deployment.md) |
-# 🤖 Machine Learning Roadmap: от базы до гуру вайбкодинга
 
 > **Карта обучения машинному обучению (Machine Learning, Deep Learning, LLM, Generative AI, MLOps)** — от первого `import numpy` до уровня инженера, который понимает, **как ИИ работает внутри**, и может писать прод‑системы, а не только дёргать API.
 
