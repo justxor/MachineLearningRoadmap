@@ -826,6 +826,7 @@ flowchart LR
 - **r/MachineLearning**, **r/LocalLLaMA** — Reddit, лучшие практические треды по open-source LLM.
 - **EleutherAI Discord**, **Hugging Face Discord** — где сидят авторы статей.
 - **AlphaSignal**, **The Batch (DeepLearning.AI)**, **Import AI** (Jack Clark), **Interconnects** (Nathan Lambert) — рассылки.
+- **[AI Weekly](https://aiweekly.co/)** — узнайте, что AI-эксперты читают и чем делятся прямо сейчас.
 
 **Русскоязычные:**
 
@@ -2052,7 +2053,7 @@ CPU и память в норме. Ошибок 5xx нет.
 - **[ArXiv](https://arxiv.org)** + **[ArXiv Sanity Preserver](https://arxiv-sanity-lite.com)** — основной канал.
 - **[Papers with Code](https://paperswithcode.com)** — статьи с реализациями и benchmarks.
 - **[Hugging Face Daily Papers](https://huggingface.co/papers)** — куратор-фильтр свежего.
-- **[Alphasignal](https://alphasignal.ai)**, **[The Batch](https://www.deeplearning.ai/the-batch/)**, **[Import AI](https://importai.substack.com)** — еженедельные digest-ы.
+- **[Alphasignal](https://alphasignal.ai)**, **[The Batch](https://www.deeplearning.ai/the-batch/)**, **[AI Weekly](https://aiweekly.co/)**, **[Import AI](https://importai.substack.com)** — еженедельные digest-ы.
 - Конференции: NeurIPS, ICML, ICLR, ACL, EMNLP, CVPR, ICCV. Workshop-papers часто прикладнее main track.
 
 #### 11.3. Какие статьи читать в первую очередь
